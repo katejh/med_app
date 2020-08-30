@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Med App</string>
+    <string name="buttonNavigate_fromHome_toMedsMenu">Button</string>
+    <string name="textview">Time until next medication: %d hrs %d min</string>
 </resources>
