@@ -10,12 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".EditMedication"
+            android:name=".EditMedicationActivity"
             android:label="@string/edit_medication_name">
 
         </activity>
         <activity
-            android:name=".MedicationsMenu"
+            android:name=".MedicationsMenuActivity"
             android:label="@string/title_activity_medications_menu"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MainActivity">
