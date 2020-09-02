@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array
+        name="frequency_array">
+        <item>daily</item>
+        <item>every __ days</item>
+        <item>weekly</item>
+        <item>custom</item>
+    </string-array>
+</resources>
