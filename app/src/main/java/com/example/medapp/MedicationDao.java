@@ -5,7 +5,10 @@ import androidx.room.Query;
 
 import java.util.List;
 
-// Medication data access object
+/*
+ * Medication data access object
+ * Each function has a related SQL query for a Medication object in the database
+ */
 @Dao
 public interface MedicationDao {
     @Query("INSERT INTO medications (name, amount_left, instructions) VALUES ('New medication', '0', 'instructions')")

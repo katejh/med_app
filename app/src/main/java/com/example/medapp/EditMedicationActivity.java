@@ -38,6 +38,8 @@ public class EditMedicationActivity extends AppCompatActivity {
         medNumPicker.setMaxValue(150);
         medNumPicker.setMinValue(0);
 
+        // i don't know what this does or how it works???? but it's important
+        // MedicationsAdapter sends data to EditMedicationActivity through the Intent object somehow to display in the necessary fields
         editName = findViewById(R.id.medname_field);
         editInstructions = findViewById(R.id.medinstructions_field);
         String medName = getIntent().getStringExtra("name");
