@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,8 +18,8 @@ import java.util.List;
 public class MedicationsAdapter extends RecyclerView.Adapter<MedicationsAdapter.MedicationsMenuHolder> {
     public static class MedicationsMenuHolder extends RecyclerView.ViewHolder {
         LinearLayout containerView;
-        EditText medNameView;
-        EditText medInstructionsView;
+        TextView medNameView;
+        TextView medInstructionsView;
 
         MedicationsMenuHolder(View view){
             super(view);
