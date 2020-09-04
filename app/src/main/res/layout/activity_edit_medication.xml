@@ -25,13 +25,14 @@
         android:layout_width="261dp"
         android:layout_height="46dp"
         android:layout_weight=".60"
+        android:inputType="text"
+        android:text="Placeholder Name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toEndOf="@+id/medname_label"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.181"
-        android:text="Placeholder Name">
+        app:layout_constraintVertical_bias="0.181">
 
         <requestFocus />
 
@@ -161,6 +162,37 @@
         app:layout_constraintStart_toEndOf="@+id/medtimes_label3"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.624" />
+
+    <TextView
+        android:id="@+id/medinstructions_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Instructions"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/medtimes_label"
+        app:layout_constraintVertical_bias="0.06" />
+
+    <EditText
+        android:id="@+id/medinstructions_field"
+        android:layout_width="261dp"
+        android:layout_height="46dp"
+        android:layout_weight=".60"
+        android:inputType="text"
+        android:text="Placeholder Instructions"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/medinstructions_label"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.437">
+
+        <requestFocus />
+
+    </EditText>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,10 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
+
 import android.widget.NumberPicker;
+
+import android.widget.EditText;
+
 import android.widget.Spinner;
 
 public class EditMedicationActivity extends AppCompatActivity {
+    private EditText editName;
+    private EditText editInstructions;
+    private int id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,10 +22,10 @@ public class EditMedicationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_edit_medication);
 
         Spinner frequency_spinner = (Spinner) findViewById(R.id.frequency_spinner);
-        ArrayAdapter<CharSequence> frequecy_adapter = ArrayAdapter.createFromResource(this,
+        ArrayAdapter<CharSequence> frequency_adapter = ArrayAdapter.createFromResource(this,
                 R.array.frequency_array, android.R.layout.simple_spinner_item);
-        frequecy_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        frequency_spinner.setAdapter(frequecy_adapter);
+        frequency_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        frequency_spinner.setAdapter(frequency_adapter);
 
         Spinner end_date_spinner = (Spinner) findViewById(R.id.end_date_spinner);
         ArrayAdapter<CharSequence> end_date_adapter = ArrayAdapter.createFromResource(this,
@@ -26,10 +33,25 @@ public class EditMedicationActivity extends AppCompatActivity {
         end_date_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         end_date_spinner.setAdapter(end_date_adapter);
 
-        NumberPicker mednumpicker = findViewById(R.id.mednumpicker);
+        NumberPicker medNumPicker = findViewById(R.id.mednumpicker);
 
-        mednumpicker.setMaxValue(150);
-        mednumpicker.setMinValue(0);
+        medNumPicker.setMaxValue(150);
+        medNumPicker.setMinValue(0);
 
+        editName = findViewById(R.id.medname_field);
+        editInstructions = findViewById(R.id.medinstructions_field);
+        String medName = getIntent().getStringExtra("name");
+        String instructions = getIntent().getStringExtra("instructions");
+        id = getIntent().getIntExtra("id", 0);
+        editName.setText(medName);
+        editInstructions.setText(instructions);
+
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        MedicationsMenuActivity.medicationsDatabase.medicationDao().save(editName.getText().toString(), editInstructions.getText().toString(), id);
     }
 }
