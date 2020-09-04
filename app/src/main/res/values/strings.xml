@@ -98,4 +98,7 @@
     <string name="times">Times</string>
     <string name="end_date">End date</string>
     <string name="edit_medication_name">edit_medication</string>
+    <string name="amount_left">Amount left</string>
+    <string name="colour">Colour</string>
+    <string name="instructions">Instructions</string>
 </resources>

@@ -54,6 +54,58 @@
         android:id="@+id/medtimes_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/end_date"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.144"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/medtimes_label2"
+        app:layout_constraintVertical_bias="0.079" />
+
+    <TextView
+        android:id="@+id/medtimes_label3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/colour"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.136"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/medtimes_label4"
+        app:layout_constraintVertical_bias="0.402" />
+
+    <TextView
+        android:id="@+id/medtimes_label5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/instructions"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.136"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/medtimes_label4"
+        app:layout_constraintVertical_bias="0.656" />
+
+    <TextView
+        android:id="@+id/medtimes_label4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/amount_left"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.156"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/medtimes_label"
+        app:layout_constraintVertical_bias="0.233" />
+
+    <TextView
+        android:id="@+id/medtimes_label2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/times"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -69,10 +121,46 @@
         android:layout_height="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintHorizontal_bias="0.755"
         app:layout_constraintStart_toEndOf="@+id/medfrequency_label"
         app:layout_constraintTop_toBottomOf="@+id/medname_field"
-        app:layout_constraintVertical_bias="0.039" />
+        app:layout_constraintVertical_bias="0.035" />
+
+    <Button
+        android:id="@+id/add_med"
+        android:layout_width="51dp"
+        android:layout_height="44dp"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintStart_toEndOf="@+id/medtimes_label2"
+        app:layout_constraintTop_toBottomOf="@+id/frequency_spinner"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <Spinner
+        android:id="@+id/end_date_spinner"
+        android:layout_width="139dp"
+        android:layout_height="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.78"
+        app:layout_constraintStart_toEndOf="@+id/medtimes_label"
+        app:layout_constraintTop_toBottomOf="@+id/add_med"
+        app:layout_constraintVertical_bias="0.063" />
+
+    <NumberPicker
+        android:id="@+id/mednumpicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="155dp"
+        android:layout_marginLeft="155dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.623"
+        app:layout_constraintStart_toEndOf="@+id/medtimes_label3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.624" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

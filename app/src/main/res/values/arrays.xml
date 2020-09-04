@@ -7,4 +7,11 @@
         <item>weekly</item>
         <item>custom</item>
     </string-array>
+
+    <string-array
+        name="end_date_array">
+        <item>indefinite</item>
+        <item>custom date</item>
+        <item>until finished</item>
+    </string-array>
 </resources>
