@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 
+import android.widget.LinearLayout;
 import android.widget.NumberPicker;
 
 import android.widget.EditText;
@@ -27,11 +28,26 @@ public class EditMedicationActivity extends AppCompatActivity {
         frequency_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         frequency_spinner.setAdapter(frequency_adapter);
 
-        Spinner end_date_spinner = (Spinner) findViewById(R.id.end_date_spinner);
+        String frequency_choice = frequency_spinner.getSelectedItem().toString();
+
+
+
+        Spinner end_date_spinner = (Spinner) findViewById(R.id.end_date_spinner_day);
         ArrayAdapter<CharSequence> end_date_adapter = ArrayAdapter.createFromResource(this,
                 R.array.frequency_array, android.R.layout.simple_spinner_item);
         end_date_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         end_date_spinner.setAdapter(end_date_adapter);
+
+        String end_date_choice = end_date_spinner.getSelectedItem().toString();
+
+
+        LinearLayout date_choice = findViewById(R.id.date_choice);
+
+        if(frequency_choice.equals("Custom date")){
+            date_choice.setVisibility(LinearLayout.VISIBLE);;
+        } else {
+            date_choice.setVisibility(LinearLayout.GONE);
+        }
 
         NumberPicker medNumPicker = findViewById(R.id.mednumpicker);
 

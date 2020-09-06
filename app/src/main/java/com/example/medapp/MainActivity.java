@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, MedicationsMenuActivity.class));
+                startActivity(new Intent(MainActivity.this, EditMedicationActivity.class));
             }
         });
     }
